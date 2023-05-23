@@ -13,7 +13,7 @@ import { Product } from './products/product.model';
       host: 'localhost',
       port: 3306,
       username: 'root',
-      password: 'Khurana1222@',
+      password: 'root',
       database: 'nest-api',
       models: [Product],
       autoLoadModels: true,
