@@ -7,6 +7,8 @@ import { ProductsService } from "./products.service";
 import { Product } from "./product.model";
 import { jwtConfig } from "src/config/jwt.config";
 
+
+//this file is declared in app.module.ts
 @Module({
     imports: [SequelizeModule.forFeature([Product]),
     JwtModule.register(jwtConfig)

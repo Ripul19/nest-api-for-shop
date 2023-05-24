@@ -3,9 +3,46 @@ Developed an api on products to do the CRUD operation
 Implemented mysql database
 added the JWT token
 
+To run this 
+1. Clone the repo to your system
+2. setup your database locally and put it's credentials and database name and other info which need to change in database.module.ts file in the src/config folder
+3. Change the jwt token secret which is in the jwt.config.ts file present in the src/config folder
+4. You are ready to run the project.
+5. Database handling is done through Sequelize, no need to change the queries
+
+6. run command npm run start:dev
+
+  POST Request
+7. Go to Postman and send a post request to the link localhost:3000/products
+    Request Body: {"title": "", "description": "", "price": ""}
+    
+  GET Request
+8. now, send a Get request to the same link and you can get the product added to terminal
+
+9. Similarly you can add more products through POST request
+
+  GET Request
+10. To fetch single product, send a get request to localhost:3000/products/:id,
+  where :id will be replaced by the id of the product you want to fetch
+
+  PATCH Request
+11. Update operation can be performed by sending a Patch request to localhost:3000/products/:id,
+  where :id will be replaced by the id of the product you want to fetch
+  Request Body: {"title": "", "description": "", "price": ""}
+  You can send only one or two fields also, no need to send all the three fields
+
+  DELETE Request
+12. Delete operation can be performed by sending a delete request to localhost:3000/products/:id,
+  where :id will be replaced by the id of the product you want to fetch
+
+
+
 Imporvements that can be done
 1. Env file needs to set up
-2. Docker containerization can be done
+2. JWT token can be added to env file
+3. Docker containerization 
+
+These will help to make a less hardcode app
 -->
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>

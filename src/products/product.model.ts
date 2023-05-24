@@ -1,7 +1,10 @@
 import { AutoIncrement, Column, DataType, Model, PrimaryKey, Table } from "sequelize-typescript";
 
+
+//Model or entity
 @Table
 export class Product extends Model {
+
     @PrimaryKey
     @AutoIncrement
     @Column
