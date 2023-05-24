@@ -1,3 +1,12 @@
+<!-- 
+Developed an api on products to do the CRUD operation
+Implemented mysql database
+added the JWT token
+
+Imporvements that can be done
+1. Env file needs to set up
+2. Docker containerization can be done
+-->
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
