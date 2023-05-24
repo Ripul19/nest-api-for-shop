@@ -1,14 +1,12 @@
-// export class Product {
-
-//     constructor(public id: string, public title: string, public description: string, public price: number){
-
-//     }
-// }
-
-import { Column, DataType, Model, Table } from "sequelize-typescript";
+import { AutoIncrement, Column, DataType, Model, PrimaryKey, Table } from "sequelize-typescript";
 
 @Table
 export class Product extends Model {
+    @PrimaryKey
+    @AutoIncrement
+    @Column
+    id: number;
+
     @Column 
     title: string;
 

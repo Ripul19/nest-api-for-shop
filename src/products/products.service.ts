@@ -8,8 +8,8 @@ export class ProductsService {
 
     constructor(@InjectModel(Product) private productModel: typeof Product) {}
 
-    insertProduct(title: string, description: string, price: number){
-        const product = this.productModel.create({title, description, price});
+    async insertProduct(title: string, description: string, price: number){
+        const product = await this.productModel.create({title, description, price});
         return product;
     }
 
@@ -17,34 +17,34 @@ export class ProductsService {
         return this.productModel.findAll();
     }
 
-    getOneProduct(prodId: number){
-        const product = this.findProduct(prodId);
+    async getOneProduct(prodId: number){
+        const product = await this.findProduct(prodId);
         return product;
     }
 
     async updateProd(prodId: number, title: string, description: string, price: number){
-        const product = this.findProduct(prodId);
+        const product = await this.findProduct(prodId);
         
         if(title){
-            (await product).title = title;
+            product.title = title;
         }
         if(description){
-            (await product).description = description;
+            product.description = description;
         }
         if(price){
-            (await product).price = price;
+            product.price = price;
         }
-        (await product).save();
+        product.save();
         return product;
     }
 
     async removeProduct(prodId: number){
-        const product = this.findProduct(prodId);
-        (await product).destroy();
+        const product = await this.findProduct(prodId);
+        product.destroy();
     }
 
-    private findProduct(prodId: number) {
-        const product = this.productModel.findByPk(prodId);
+    private async findProduct(prodId: number) {
+        const product = await this.productModel.findByPk(prodId);
         if(!product){
             throw new NotFoundException("Product Not found");
         }
