@@ -1,5 +1,5 @@
 
-# Ajaragh Kreation Solutions Backend Assignment
+# Ajargh Kreation Solutions Backend Assignment
  
 ## Description
  
