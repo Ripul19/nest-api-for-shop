@@ -90,7 +90,8 @@ You can send only one or two fields also, no need to send all the three fields
  
 where :id will be replaced by the id of the product you want to fetch
  
- 
+ ### Postman Export Link
+ https://github.com/Ripul19/nest-api-for-shop/blob/develop/nest-api.postman_collection.json
  
  
  
