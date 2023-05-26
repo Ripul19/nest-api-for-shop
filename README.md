@@ -1,5 +1,5 @@
 
-# Ajaragh Kretiol Solutions Backend Assignment
+# Ajaragh Kretion Solutions Backend Assignment
  
 ## Description
  
